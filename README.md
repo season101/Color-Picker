@@ -13,3 +13,5 @@ Additionally, Other helpful utilities used in the project are:
 **Values.js** -> To generate a list of colors.
 
 **React-Toastify** -> To setup Toast Component in App.
+
+**Clipboard API** -> To allow website to save color hex value to user's clipboard.
