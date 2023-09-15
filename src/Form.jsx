@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Values from 'values.js';
 import ColorList from './ColorList';
-const Form = ({ addColor }) => {
+const Form = () => {
   const [color, setColor] = useState('#800080');
   const [colorList, setColorList] = useState([]);
 
@@ -12,7 +12,6 @@ const Form = ({ addColor }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setColorList(new Values(color).all(10));
-    addColor(color);
   };
 
   return (
@@ -26,6 +25,8 @@ const Form = ({ addColor }) => {
             onChange={(e) => setColor(e.target.value)}
           />
           <input
+            required
+            minLength={7}
             type="text"
             value={color}
             placeholder={color}
