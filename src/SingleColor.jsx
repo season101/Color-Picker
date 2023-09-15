@@ -1,7 +1,6 @@
 import React from 'react';
 
 const SingleColor = ({ color }) => {
-  console.log(color);
   const { rgb, weight, hex, type } = color;
   const [r, g, b] = rgb;
   return (
