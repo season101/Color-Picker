@@ -18,23 +18,26 @@ const Form = () => {
 
   return (
     <>
-      <form className="color-form" onSubmit={handleSubmit}>
-        <input
-          type="color"
-          value={color}
-          onChange={(e) => setColor(e.target.value)}
-        />
-        <input
-          type="text"
-          value={color}
-          placeholder="#f15025"
-          onChange={(e) => setColor(e.target.value)}
-        />
+      <section className="container">
+        <h4>Color Picker</h4>
+        <form className="color-form" onSubmit={handleSubmit}>
+          <input
+            type="color"
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+          />
+          <input
+            type="text"
+            value={color}
+            placeholder="#f15025"
+            onChange={(e) => setColor(e.target.value)}
+          />
 
-        <button type="submit" className="btn" style={{ background: color }}>
-          submit
-        </button>
-      </form>
+          <button type="submit" className="btn" style={{ background: color }}>
+            submit
+          </button>
+        </form>
+      </section>
       <ColorList colorList={colorList} />
     </>
   );

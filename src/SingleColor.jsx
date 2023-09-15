@@ -2,12 +2,26 @@ import React from 'react';
 
 const SingleColor = ({ color }) => {
   console.log(color);
-  const [r, g, b] = color.rgb;
+  const { rgb, weight, hex, type } = color;
+  const [r, g, b] = rgb;
   return (
     <article
       className="color false"
       style={{ backgroundColor: `rgb(${r},${g},${b})` }}
-    ></article>
+    >
+      <p
+        className="percent-value"
+        style={type === 'shade' ? { color: 'white' } : { color: 'black' }}
+      >
+        {weight}%
+      </p>
+      <p
+        className="color-value"
+        style={type === 'shade' ? { color: 'white' } : { color: 'black' }}
+      >
+        #{hex}
+      </p>
+    </article>
   );
 };
 
